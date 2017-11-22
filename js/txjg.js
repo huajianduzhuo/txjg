@@ -1,4 +1,5 @@
 let search = document.getElementById('search');
+let btn = document.getElementById('btn');
 let del = document.getElementById('del');
 let searchList = document.getElementById('searchList');
 let dls = document.querySelectorAll('dl');
@@ -9,8 +10,8 @@ let dramaSerialSelectors = document.querySelectorAll('#dramaSerialSelector > li'
 dts.forEach((dt, i) => {
   dt.id = `til${i}`;
 })
-search.onkeyup = function (event) {
-  if (event.keyCode === 13) {
+search.onkeyup = btn.onclick = function (event) {
+  if (event.keyCode === 13 || event.target.nodeName === 'BUTTON') {
     searchList.innerHTML = "";
     let ids = [];
     let resList = [];

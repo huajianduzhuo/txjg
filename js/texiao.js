@@ -63,7 +63,7 @@ moveCallback = event => {
   event = event || window.event;
   let target = event.target || event.srcElement;
   let node = target.nodeName;
-  if (node === 'LI' || node === 'INPUT' || node === 'A') {
+  if (node === 'LI' || node === 'INPUT' || node === 'A' || node === 'BUTTON') {
     return;
   }
   let mx = event.clientX;

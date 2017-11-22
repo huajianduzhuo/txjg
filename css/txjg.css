@@ -61,6 +61,10 @@ form {
   cursor: pointer;
 }
 
+.btn {
+  display: none;
+}
+
 #searchList {
   width: 75%;
   margin: 20px auto;
@@ -163,6 +167,34 @@ canvas {
 @media (max-width: 667px) {
   .bg{
     display: none;
+  }
+
+  form{
+    width: 100%;
+    text-align: center;
+  }
+
+  input {
+    width: 75%;
+  }
+
+  .del {
+    display: none;
+  }
+
+  .btn{
+    display: inline-block;
+    border: 2px solid rgb(100, 172, 240);
+    border-radius: 8px;
+    width: 3.5em;
+    height: 30px;
+    line-height: 26px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgb(100, 172, 240);
+    color: white;
+    font-size: 14px;
+    outline: none;
   }
   .linebox {
     width: 95%;
