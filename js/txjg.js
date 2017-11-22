@@ -54,6 +54,7 @@ search.onkeyup = function (event) {
         searchList.appendChild(li);
       }
     });
+    init();
   }
 }
 
@@ -71,6 +72,7 @@ dramaSerialSelectors.forEach((selector, index) => {
       s.className = ''
     });
     selector.className = 'active';
+    init();
   }
 })
 
@@ -83,18 +85,3 @@ document.addEventListener('touchmove', function (event) {
   }
 })
 
-$('#dramaSerialSelector').on('swipeLeft', function (event) {
-  let wrapW = $('#dramaSerialSelectorWrap').width();
-  let selectorW = $('#dramaSerialSelector').width();
-  if (wrapW < selectorW) {
-    console.log(event);
-  }
-})
-
-$("#dramaSerialSelector").on('swipeRight', function (event) {
-  let wrapW = $('#dramaSerialSelectorWrap').width();
-  let selectorW = $('#dramaSerialSelector').width();
-  if (wrapW < selectorW) {
-    
-  }
-})

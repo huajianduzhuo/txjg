@@ -153,6 +153,13 @@ dd {
   line-height: 1.5;
 }
 
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 @media (max-width: 667px) {
   .bg{
     display: none;
@@ -170,15 +177,17 @@ dd {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 30px;
   }
 
   .dramaSerialSelector {
-    float: left;
-    position: absolute;
-    top: 0;
-    left: 0;
     touch-action: none;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .dramaSerialSelector li {
+    display: block;
+    margin: 0 5px 5px;
   }
   
   .dramaSerialList dl {
