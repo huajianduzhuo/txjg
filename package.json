@@ -1,0 +1,31 @@
+{
+  "name": "txjg",
+  "version": "1.0.0",
+  "description": "[demo](http://mengyujing.com/txjg)",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huajianduzhuo/txjg.git"
+  },
+  "author": "yujing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huajianduzhuo/txjg/issues"
+  },
+  "homepage": "https://github.com/huajianduzhuo/txjg#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0"
+  }
+}

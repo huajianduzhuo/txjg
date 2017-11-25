@@ -59,7 +59,7 @@ setInterval(() => {
   })
 }, 1000);
 
-moveCallback = event => {
+let moveCallback = event => {
   event = event || window.event;
   let target = event.target || event.srcElement;
   let node = target.nodeName;

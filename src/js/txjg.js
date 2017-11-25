@@ -3,15 +3,30 @@ let btn = document.getElementById('btn');
 let del = document.getElementById('del');
 let searchList = document.getElementById('searchList');
 let dls = document.querySelectorAll('dl');
+dls = Array.from(dls);
 let dts = document.querySelectorAll('dt');
+dts = Array.from(dts);
 let dds = document.querySelectorAll('dd');
+dds = Array.from(dds);
 let dramaSerialSelector = document.getElementById('dramaSerialSelector');
 let dramaSerialSelectors = document.querySelectorAll('#dramaSerialSelector > li');
+dramaSerialSelectors = Array.from(dramaSerialSelectors);
 dts.forEach((dt, i) => {
   dt.id = `til${i}`;
-})
+});
+search.onkeydown = function (event) {
+  event = event || window.event;
+  if(event.keyCode === 13){
+    if(event.preventDefault){
+      event.preventDefault();
+    }else{
+      return false;
+    }
+  }
+}
 search.onkeyup = btn.onclick = function (event) {
   if (event.keyCode === 13 || event.target.nodeName === 'BUTTON') {
+    event.preventDefault();
     searchList.innerHTML = "";
     let ids = [];
     let resList = [];
