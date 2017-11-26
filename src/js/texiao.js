@@ -68,6 +68,13 @@ let moveCallback = event => {
   }
   let mx = event.clientX;
   let my = event.clientY;
+  if (event.type === 'touchmove' && event.changedTouches.length === 1) {
+    mx = event.changedTouches[0].clientX;
+    my = event.changedTouches[0].clientY;
+  }
+  if (!mx) {
+    return;
+  }
   let direct = Math.random() * 2 * Math.PI;
   let ball = new Ball(mx, my, direct);
   balls.push(ball);
