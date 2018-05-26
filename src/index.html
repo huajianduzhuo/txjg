@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/txjg.css">
+  <title>天行九歌分集剧情</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="bg"></div>
+    <div class="form">
+      <input type="text" id="search" v-model="search" placeholder="搜索剧情..." autofocus @keyup.enter.prevent="handleSearch">
+      <span class="del" id="del" @click="search=''">×</span>
+      <button class="btn" id="btn" @click.prevent="handleSearch">搜 索</button>
+    </div>
+    <ul id="searchList">
+      <li v-for="(result,index) in searchResult" :key="index">
+        <span>
+          <a :href="`#til${result.id}`">{{result.title}}</a>
+        </span>
+        <span>:</span>
+        <span v-html="result.res"></span>
+      </li>
+    </ul>
+    <div class="linebox">
+      <span class="line"></span>
+      <span class="title">分集剧情</span>
+      <span class="line"></span>
+    </div>
+    <div class="wrap" id="dramaSerialSelectorWrap">
+      <ul class="dramaSerialSelector" id="dramaSerialSelector">
+        <li v-for="(item, index) in dramaSerial" :class="{'active': dramaSerialIndex === index}" @click="handleSelect(index)" :key="index">
+          {{item}}
+        </li>
+      </ul>
+    </div>
+    <div id="juqing"></div>
+    <canvas id="canvas" width="500px" height="300px"></canvas>
+    <div class="loading" v-if="loading">加载中...</div>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="./js/build.min.js"></script>
+
+</html>
