@@ -4,10 +4,11 @@
 
 [版本 1.0 demo](http://mengyujing.com/txjg)
 
-## 运行
+## 本地运行
 
 * npm install 或 yarn
 * node app.js
+* 打开 http://localhost:9000/
 * 若更改了 /src 中的源文件，执行 gulp 重新编译
   > 已启动 gulp watch，监测 /src 目录中的文件
 
