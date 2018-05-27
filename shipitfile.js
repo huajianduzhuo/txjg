@@ -21,7 +21,7 @@ module.exports = function (shipit) {
       },
       pm: {
         production: {
-          path: '/home/work/myj-project/txjg/pm2/production.json'
+          path: '/home/work/myj-project/current/pm2/production.json'
         }
       }
     },

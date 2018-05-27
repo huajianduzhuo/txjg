@@ -1,6 +1,6 @@
 {
   "name": "txjg",
-  "script": "/home/work/myj-project/txjg/app.js",
+  "script": "/home/work/myj-project/current/app.js",
   "error_file": "/data/logs/pm2/myj-project/error.log",
   "out_file": "/data/logs/pm2/myj-project/out.log",
   "log_date_format": "YYYY-MM-DD HH:mm Z",
