@@ -4,6 +4,7 @@
   "description": "[demo](http://mengyujing.com/txjg)",
   "main": "gulpfile.js",
   "scripts": {
+    "deploy": "shipit production deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
