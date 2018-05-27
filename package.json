@@ -21,7 +21,9 @@
     "koa": "^2.5.1",
     "koa-router": "^7.4.0",
     "koa-static": "^4.0.3",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "shipit-cnpm": "^0.7.0",
+    "shipit-deploy": "^4.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
