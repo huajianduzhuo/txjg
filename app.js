@@ -12,8 +12,8 @@ app.use(main)
 
 // 路由
 let router = new Router()
-router.get('/load', async (ctx, next) => {
-  await axios.get('https://baike.baidu.com/item/%E5%A4%A9%E8%A1%8C%E4%B9%9D%E6%AD%8C', {
+router.get('/load', function * (next){
+  yield axios.get('https://baike.baidu.com/item/%E5%A4%A9%E8%A1%8C%E4%B9%9D%E6%AD%8C', {
     headers: {
       "Content-Type": 'text/html'
     },
@@ -23,14 +23,15 @@ router.get('/load', async (ctx, next) => {
       let result = res.data
       result = result.substring(result.indexOf('<ul class="dramaSerialList" id="dramaSerialList">'))
       result = result.substring(0, result.indexOf('</ul>') + 5)
-      ctx.body = result
+      this.body = result
     })
     .catch(() => {
-      ctx.body = '获取数据失败'
-      ctx.status = 500
+      this.body = '获取数据失败'
+      this.status = 500
     })
-  await next()
+    yield next
 })
+
 app.use(router.routes()).use(router.allowedMethods())
 
 // 错误监听
